@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+}
+
+nav {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.menu {
+  width: 230px;
+  display: flex;
+  justify-content: space-around;
+}
+.menu li {
+  list-style: none;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: black;
+}
+.logo {
+  padding-left: 12px;
+}
+.logo h4 {
+  font-size: 22px;
+  letter-spacing: 7px;
+}
+.logo p {
+  font-weight: 300;
+  color: #1f1f1f;
+  letter-spacing: 1px;
+}
+
+.title {
+  width: 70%;
+}
+.title h1 {
+  width: 400px;
+  height: 70px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  letter-spacing: -2px;
+}
+
+.big-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.big-container img {
+  width: 400px;
+  height: 430px;
+  margin-left: -75px;
+  margin-top: 30px;
+}
+
+.forms {
+  width: 300px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin-left: 80px;
+}
+
+form input {
+  width: 380px;
+  height: 40px;
+  margin-top: 30px;
+  border: none;
+  box-shadow: 0px 2px 6px 0px rgba(115,115,115,0.2);
+  -webkit-box-shadow: 0px 2px 6px 0px rgba(115,115,115,0.2);
+  -moz-box-shadow: 0px 2px 6px 0px rgba(115,115,115,0.2);
+  padding: 15px;
+  outline: 0;
+  border-radius: 5px;
+  color: rgba(17, 17, 17, 0.48);
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+.msg{
+  width: 380px;
+  height: 150px;
+  margin-top: 30px;
+  border: none;
+  box-shadow: 0px 2px 6px 0px rgba(115,115,115,0.2);
+  -webkit-box-shadow: 0px 2px 6px 0px rgba(115,115,115,0.2);
+  -moz-box-shadow: 0px 2px 6px 0px rgba(115,115,115,0.2);
+  padding: 15px;
+  outline: 0;
+  border-radius: 5px;
+  color: rgba(17, 17, 17, 0.48);
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+.button{
+  width: 380px;
+  height: 40px;
+  background-color: #1f1f1f;
+  margin-top: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

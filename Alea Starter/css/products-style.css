@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: "Karla", sans-serif;
+  }
+  
+  nav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .menu {
+    width: 230px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .menu li {
+    list-style: none;
+  }
+  
+  .menu li a{
+      text-decoration: none;
+      color: black;
+  }
+  .logo{
+      padding-left: 12px;
+  
+  }
+  .logo h4{
+      font-size: 22px;
+      letter-spacing: 7px;
+  }
+  .logo p{
+      font-weight: 300;
+      color: #1f1f1f;
+      letter-spacing: 1px;
+  }
+  
+header{
+  width: 76%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.desc{
+  width: 170px;
+  height: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  letter-spacing: -2px;
+}
+
+.paragraphs{
+  width: 340px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.paragraphs p{
+  padding: 0 25px;
+  color: #62666D;
+  letter-spacing: -1px;
+  font-size: 18px;
+}
+
+.category{
+  width: 100%;
+  height: 30px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.category-list{
+  width: 300px;
+  display: flex;
+  border-bottom: 1px solid #E5E5E5;
+}
+.category-list li{
+  list-style: none;
+  padding: 0 15px;
+  color: #62666D;
+  cursor: pointer;
+}
+
+.category-list li:hover{
+  color: black;
+}
+
+.big{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.products{
+  width: 85%;
+  padding: 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.link{
+  text-decoration: none;
+  color: black;
+}
+.card{
+  width: 240px;
+  height: 170px;
+  background-color: #F6F2FF;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+}
+
+.card h1{
+  letter-spacing: -2px;
+  margin-top: 90px;
+  font-size: 27px;
+  font-weight: 600;
+}
+
+.card h3{
+  color: #62666D;
+  font-weight: 300;
+  margin-left: -100px;
+  margin-top: 5px;
+  letter-spacing: -1px;
+}
+.card p{
+  color: #62666d75;
+  letter-spacing: -1px;
+  margin-left: -100px;
+  font-size: 15px;
+}
+
+
+.card img{
+  width: 150px;
+  margin-top: -5px;
+}
