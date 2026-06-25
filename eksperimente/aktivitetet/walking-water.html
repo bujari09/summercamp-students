@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Walking Water · jCoders</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="walking-water.css" />
+  <!-- Ngjyra teme e këtij aktiviteti -->
+  <style>
+    :root { --accent:#29B6F6; --accent-2:#4FC3F7; --accent-soft:#E2F5FF; }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <img class="logo" src="../assets/img/jcoders-logo.png" alt="jCoders Academy" />
+    <a class="btn-back" href="../index.html">← Aktivitetet</a>
+  </header>
+
+  <main class="activity">
+    <!-- Koka -->
+    <div class="act-head">
+      <div class="deco">💧</div>
+      <div class="pills">
+        <span class="pill yellow">Karta e Shkencëtarit</span>
+        <span class="pill navy">Aktiviteti 1</span>
+      </div>
+      <h1>Walking Water</h1>
+      <p class="tag">Uji që ecën dhe ngjyrat që përzihen</p>
+    </div>
+
+    <!-- Pyetja e shkencëtarit -->
+    <div class="question">
+      <span class="lbl">Pyetja e shkencëtarit</span>
+      <p>Si lëviz uji nga një gotë në tjetrën — dhe çfarë ndodh kur dy ngjyra takohen në mes?</p>
+    </div>
+
+    <!-- HAPAT -->
+    <div class="steps">
+
+      <!-- Hapi 1: Materialet -->
+      <section class="step">
+        <h2>Çfarë na duhet 🧰</h2>
+        <p class="lead">Mblidhni materialet para se të fillojmë eksperimentin.</p>
+        <div class="materials">
+          <div class="material"><span class="ic">🥤</span> Gota qelqi</div>
+          <div class="material"><span class="ic">💧</span> Ujë</div>
+          <div class="material"><span class="ic">🎨</span> Ngjyra ushqimore</div>
+          <div class="material"><span class="ic">🧻</span> Letra kuzhine</div>
+        </div>
+        <div class="science" style="margin-top:24px;">
+          <h3>Si e ndërtojmë?</h3>
+          <p>Vendosim disa gota në rresht. Disa i mbushim me ujë me ngjyra,
+             ndërsa gotat në <span class="word">mes i lëmë bosh</span>.
+             Pastaj palosim letrën e kuzhinës dhe e vendosim si <span class="word">urë</span>
+             midis gotave — njëra anë në ujë, ana tjetër në gotën bosh.</p>
+        </div>
+      </section>
+
+      <!-- Hapi 2: Parashikimi -->
+      <section class="step">
+        <h2>Parashikimi im 🤔</h2>
+        <p class="lead">Çfarë mendoni se do të ndodhë? Votoni para se ta provojmë!</p>
+        <div class="predict">
+          <div>
+            <div class="q">Sa shpejt do të lëvizë uji?</div>
+            <div class="options">
+              <button class="opt">Disa minuta</button>
+              <button class="opt">Shumë kohë</button>
+            </div>
+            <div class="reveal">✅ Uji fillon të ngjitet menjëherë, por mbushja e plotë merr disa minuta.</div>
+          </div>
+          <div>
+            <div class="q">Niveli i ujit në gotat bosh do të:</div>
+            <div class="options">
+              <button class="opt">Ngrihet</button>
+              <button class="opt">Qëndrojë njësoj</button>
+            </div>
+            <div class="reveal">✅ Ngrihet! Uji udhëton nëpër letër dhe mbush gotën bosh vetvetiu.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hapi 3: Eksperimenti (animacion) -->
+      <section class="step">
+        <h2>Uji që ecën 🚶‍♂️💧</h2>
+        <p class="lead">Shtyp butonin dhe shiko ujin që udhëton nëpër letër në gotën bosh.</p>
+
+        <div id="scene-walk"></div>
+
+        <div style="text-align:center; margin-top:18px;">
+          <button id="btnRun" class="btn btn-primary">▶ Nis eksperimentin</button>
+          <button id="btnReset" class="btn btn-ghost">↺ Nga fillimi</button>
+        </div>
+      </section>
+
+      <!-- Hapi 4: Përzierësi i ngjyrave -->
+      <section class="step">
+        <h2>Përzierësi i ngjyrave 🎨</h2>
+        <p class="lead">Zgjidh një ngjyrë majtas dhe një djathtas — shiko ngjyrën e re që krijohet në mes!</p>
+
+        <div id="scene-mix"></div>
+
+        <p id="mixResult" class="mix-result">Zgjidh dy ngjyra…</p>
+      </section>
+
+      <!-- Hapi 5: Mësimi -->
+      <section class="step">
+        <h2>Çfarë mësuam? 🧠</h2>
+        <div class="science">
+          <h3>Dukuria kapilare</h3>
+          <p>Uji <span class="word">ngjitet vetë</span> lart nëpër hapësirat shumë të vogla
+             të letrës — pa pompë, pa e ndihmuar askush! Kjo forcë quhet
+             <span class="word">dukuria kapilare</span>.</p>
+          <p style="margin-top:12px;">E njëjta gjë ndodh te <span class="word">bimët</span>:
+             uji ngjitet nga rrënjët, nëpër kërcell, deri te gjethet — dhe i mban të gjalla. 🌱</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Navigimi i hapave -->
+    <div class="step-nav">
+      <button class="btn btn-ghost" data-step="prev">← Mbrapa</button>
+      <div class="dots"></div>
+      <button class="btn btn-primary" data-step="next">Tjetra →</button>
+    </div>
+  </main>
+
+  <script src="../assets/js/app.js"></script>
+  <script src="walking-water.js"></script>
+</body>
+</html>

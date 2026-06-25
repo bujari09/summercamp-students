@@ -1,0 +1,305 @@
+/* ============================================================
+   jCoders Academy — Eksperimente Shkencore
+   Stil i përbashkët (branding + komponentë të ripërdorshëm)
+   Paleta merr ngjyrat nga logoja dhe kartat e shkencëtarit.
+   ============================================================ */
+
+:root {
+  --blu:        #4FC3F7;   /* blu e çelët e jCoders */
+  --blu-erret:  #1B3A5C;   /* navy i titujve */
+  --blu-shume:  #29B6F6;
+  --verdhe:     #F5B53D;   /* badge "Karta e shkencëtarit" */
+  --jeshile:    #3FB984;
+  --kuqe:       #E5484D;
+  --portokalli: #F2802E;
+  --vjollce:    #8E5BD4;
+  --letra:      #F4F8FB;   /* sfond i çelët */
+  --bardhe:     #ffffff;
+  --hije:       0 10px 30px rgba(27, 58, 92, .12);
+  --hije-fort:  0 16px 40px rgba(27, 58, 92, .20);
+  --radius:     22px;
+  --font:       'Baloo 2', 'Trebuchet MS', 'Segoe UI', system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font);
+  color: var(--blu-erret);
+  background:
+    radial-gradient(1200px 600px at 80% -10%, #E8F6FF 0%, transparent 60%),
+    radial-gradient(1000px 500px at -10% 110%, #FFF4E0 0%, transparent 55%),
+    var(--letra);
+  min-height: 100vh;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Header i përbashkët ---------- */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px clamp(18px, 4vw, 48px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.topbar .logo { height: 52px; }
+.topbar .program-tag {
+  font-weight: 700;
+  letter-spacing: .14em;
+  font-size: 13px;
+  color: var(--blu-shume);
+  text-transform: uppercase;
+}
+.btn-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  background: var(--bardhe);
+  color: var(--blu-erret);
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 16px;
+  padding: 11px 20px;
+  border-radius: 999px;
+  box-shadow: var(--hije);
+  border: 2px solid transparent;
+  transition: transform .12s ease, border-color .12s ease;
+}
+.btn-back:hover { transform: translateY(-2px); border-color: var(--blu); }
+
+/* ============================================================
+   FAQJA KRYESORE
+   ============================================================ */
+.hero {
+  text-align: center;
+  padding: 24px 20px 10px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.hero .eyebrow {
+  display: inline-block;
+  background: var(--verdhe);
+  color: var(--blu-erret);
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 7px 16px;
+  border-radius: 999px;
+}
+.hero h1 {
+  font-size: clamp(34px, 6vw, 60px);
+  line-height: 1.05;
+  margin: 16px 0 10px;
+  color: var(--blu-erret);
+}
+.hero h1 span { color: var(--blu-shume); }
+.hero p { font-size: clamp(16px, 2.4vw, 20px); color: #4a6377; }
+
+/* Rrjeti i aktiviteteve */
+.grid {
+  max-width: 1120px;
+  margin: 30px auto 60px;
+  padding: 0 clamp(18px, 4vw, 40px);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  background: var(--bardhe);
+  border-radius: var(--radius);
+  padding: 26px 24px 22px;
+  box-shadow: var(--hije);
+  border: 3px solid transparent;
+  overflow: hidden;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--hije-fort);
+  border-color: var(--accent, var(--blu));
+}
+.card .badge-nr {
+  position: absolute;
+  top: 18px; right: 18px;
+  width: 38px; height: 38px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: var(--accent, var(--blu));
+  color: #fff; font-weight: 800; font-size: 18px;
+}
+.card .emoji { font-size: 46px; line-height: 1; }
+.card h3 { font-size: 23px; margin: 14px 0 6px; }
+.card .sub { color: #5a7184; font-size: 15px; flex: 1; }
+.card .concept {
+  margin-top: 16px;
+  align-self: flex-start;
+  background: var(--accent-soft, #E8F6FF);
+  color: var(--accent, var(--blu-erret));
+  font-weight: 700;
+  font-size: 13px;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+.card.soon { opacity: .85; }
+.card.soon::after {
+  content: "Së shpejti";
+  position: absolute;
+  bottom: 22px; right: 24px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #9aa9b5;
+}
+
+.foot {
+  text-align: center;
+  color: #9aabb6;
+  font-weight: 700;
+  letter-spacing: .12em;
+  font-size: 13px;
+  padding: 0 0 40px;
+}
+
+/* ============================================================
+   GUACKA E AKTIVITETIT (e ripërdorshme nga çdo eksperiment)
+   ============================================================ */
+.activity {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 8px clamp(18px, 4vw, 40px) 60px;
+}
+
+/* Koka e aktivitetit — si kartat e shkencëtarit */
+.act-head {
+  background: linear-gradient(120deg, var(--accent) 0%, var(--accent-2, var(--blu-shume)) 100%);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 30px 34px;
+  box-shadow: var(--hije);
+  position: relative;
+  overflow: hidden;
+}
+.act-head .pills { display: flex; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
+.pill {
+  font-weight: 800; font-size: 12px; letter-spacing: .1em;
+  text-transform: uppercase; padding: 6px 14px; border-radius: 999px;
+}
+.pill.yellow { background: var(--verdhe); color: var(--blu-erret); }
+.pill.navy   { background: var(--blu-erret); color: #fff; }
+.act-head h1 { font-size: clamp(30px, 5vw, 46px); margin: 4px 0; }
+.act-head .tag { font-style: italic; opacity: .92; font-size: clamp(15px, 2.4vw, 19px); }
+.act-head .deco {
+  position: absolute; right: -10px; top: -20px; font-size: 150px; opacity: .15;
+  transform: rotate(-8deg); pointer-events: none;
+}
+
+/* Pyetja e shkencëtarit */
+.question {
+  background: #fff;
+  border: 3px solid var(--accent);
+  border-radius: 18px;
+  padding: 20px 24px;
+  margin: 22px 0;
+  box-shadow: var(--hije);
+}
+.question .lbl {
+  display: inline-block;
+  background: var(--blu-erret); color: #fff;
+  font-weight: 700; font-size: 13px;
+  padding: 5px 14px; border-radius: 999px; margin-bottom: 10px;
+}
+.question p { font-size: clamp(17px, 2.6vw, 22px); font-weight: 600; }
+
+/* Hapat — slider prezantimi */
+.steps { position: relative; }
+.step {
+  display: none;
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 30px clamp(20px, 4vw, 40px);
+  box-shadow: var(--hije);
+  animation: fade .35s ease;
+}
+.step.active { display: block; }
+@keyframes fade { from { opacity: 0; transform: translateY(12px);} to {opacity:1; transform:none;} }
+
+.step h2 { font-size: clamp(24px, 3.6vw, 32px); margin-bottom: 6px; }
+.step .lead { color: #51687a; font-size: 18px; margin-bottom: 22px; }
+
+/* Navigimi i hapave */
+.step-nav {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; margin-top: 26px;
+}
+.step-nav .dots { display: flex; gap: 9px; }
+.step-nav .dot {
+  width: 12px; height: 12px; border-radius: 50%;
+  background: #d4e2ec; border: none; cursor: pointer; padding: 0;
+  transition: transform .12s ease, background .12s ease;
+}
+.step-nav .dot.on { background: var(--accent); transform: scale(1.3); }
+.btn {
+  font-family: var(--font); font-weight: 800; font-size: 17px;
+  border: none; cursor: pointer; border-radius: 999px;
+  padding: 13px 26px; transition: transform .12s ease, box-shadow .12s ease, opacity .12s;
+}
+.btn:disabled { opacity: .35; cursor: default; }
+.btn-primary { background: var(--accent); color: #fff; box-shadow: var(--hije); }
+.btn-primary:hover:not(:disabled) { transform: translateY(-2px); }
+.btn-ghost { background: #eef4f8; color: var(--blu-erret); }
+.btn-ghost:hover:not(:disabled) { background: #e2edf4; }
+
+/* Materialet */
+.materials { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 6px; }
+.material {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--accent-soft, #E8F6FF);
+  padding: 12px 18px; border-radius: 14px; font-weight: 600;
+}
+.material .ic { font-size: 26px; }
+
+/* Bllok parashikimi (votim) */
+.predict { display: grid; gap: 18px; }
+.predict .q { font-weight: 700; font-size: 18px; margin-bottom: 8px; }
+.options { display: flex; flex-wrap: wrap; gap: 12px; }
+.opt {
+  font-family: var(--font); font-size: 17px; font-weight: 700;
+  background: #fff; color: var(--blu-erret);
+  border: 3px solid #dce8f0; border-radius: 14px;
+  padding: 14px 22px; cursor: pointer;
+  transition: all .12s ease;
+}
+.opt:hover { border-color: var(--accent); transform: translateY(-2px); }
+.opt.picked { background: var(--accent); color: #fff; border-color: var(--accent); }
+.reveal {
+  margin-top: 16px; padding: 16px 20px; border-radius: 14px;
+  background: #EAF8F0; border-left: 6px solid var(--jeshile);
+  font-weight: 600; display: none;
+}
+.reveal.show { display: block; animation: fade .3s ease; }
+
+/* Kuti shpjegimi shkencor */
+.science {
+  background: linear-gradient(120deg, #FFF7E8, #FFEFD6);
+  border-radius: 18px; padding: 24px 28px; border-left: 8px solid var(--verdhe);
+}
+.science h3 { color: var(--portokalli); margin-bottom: 8px; font-size: 22px; }
+.science .word { color: var(--portokalli); font-weight: 800; }
+
+@media (max-width: 600px) {
+  .topbar .program-tag { display: none; }
+  .step-nav { flex-direction: column-reverse; }
+  .step-nav .row { width: 100%; display: flex; justify-content: space-between; }
+}
